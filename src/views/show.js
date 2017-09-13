@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 
-class show extends Component {
+
+class Show extends Component {
     render() {
         return (
          <div className="container">
@@ -65,15 +66,9 @@ class show extends Component {
                 </div>
             </div>
             </div>
-                        
-
-
-        
-
-
         )
         
     }
 }
 
-export default show;
+export default Show;

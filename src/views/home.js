@@ -1,20 +1,12 @@
 import React, {Component} from 'react';
 
-class home extends Component {
+import { render } from 'react-dom'
+
+class Home extends Component {
     render() {
         return (
             <div> 
-            <div className="jumbotron jumbotron-fluid text-center">
-                     {/*centers text inside jumbotron*/}
-                    <div className="container">
-                        <h1 className="display-1">Picturesque</h1>
-                        <p className="lead">Your photos. Your sharing</p>
-                        <p>
-                            <a className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" href="pictures/new" role="button"
-                                style="text-decoration: none">Add a new Photo</a>
-                        </p>
-                    </div>
-                </div>
+           
             
                 <div className="container">
                     {/*creating cards here*/}
@@ -44,4 +36,4 @@ class home extends Component {
     }
 }
 
-export default home;
+export default Home;
