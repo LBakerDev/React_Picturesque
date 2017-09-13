@@ -20,6 +20,7 @@ const router = (
             <Route path="/" component = {Main}>
                 <IndexRoute component={Home}></IndexRoute>
                 <Route path = "/pictures/:id" component={Show}></Route>
+                <Route exact path = "/new" component={New}></Route>
             </Route>
         
         </Router>
