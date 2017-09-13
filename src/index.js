@@ -17,7 +17,7 @@ const router = (
     
         <Router history={browserHistory}>
         
-            <Route path="/" component = {Home}>
+            <Route path="/" component = {Main}>
                 <IndexRoute component={Home}></IndexRoute>
                 <Route path = "/pictures/:id" component={Show}></Route>
             </Route>

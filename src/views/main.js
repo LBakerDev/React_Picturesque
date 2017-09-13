@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+
 class Main extends Component {
     render() {
         return(
@@ -15,6 +16,7 @@ class Main extends Component {
                </p>
            </div>
        </div>
+       {React.cloneElement(this.props.children, this.props)}
        </div>
         )
     }
