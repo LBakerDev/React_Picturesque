@@ -15,7 +15,7 @@ const defaultState = {
     comments
 };
 
-// make the store
+// Create store
 const store = createStore(rootReducer, defaultState);
 
 // create the browser history
