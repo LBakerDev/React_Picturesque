@@ -1,7 +1,14 @@
 import React from 'react';
 import ReactDOM, { render } from 'react-dom';
+
+//import React-router dependencies
 import { Router, Route, IndexRoute, browserHistory} from 'react-router';
 import registerServiceWorker from './registerServiceWorker';
+
+// Command which lets us use redux with react
+import { Provider } from 'react-redux';
+
+import store, { history } from './store';
 
 // Importing different views for application
 import Home from './views/home';
@@ -14,8 +21,10 @@ import Main from './views/main';
 
 
 const router = (
+    // Provider will expose our store to the actual application
+    <Provider store={store}>
     
-        <Router history={browserHistory}>
+        <Router history={history}>
         
             <Route path="/" component = {Main}>
                 <IndexRoute component={Home}></IndexRoute>
@@ -24,6 +33,7 @@ const router = (
             </Route>
         
         </Router>
+    </Provider>
 
     )
 
