@@ -15,7 +15,7 @@ import Home from './views/home';
 import Show from './views/show';
 import Edit from './views/edit';
 import New from './views/new';
-import Main from './views/main';
+import App from './views/app';
 {/*import NotFound from './views/notFound';*/}
 
 
@@ -26,7 +26,7 @@ const router = (
     
         <Router history={history}>
         
-            <Route path="/" component = {Main}>
+            <Route path="/" component = {App}>
                 <IndexRoute component={Home}></IndexRoute>
                 <Route path = "/pictures/:id" component={Show}></Route>
                 <Route exact path = "/new" component={New}></Route>
