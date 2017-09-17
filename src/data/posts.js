@@ -23,3 +23,5 @@ const posts = [
        "display_src":"http://sites.gsu.edu/jbergstrom1/files/2016/04/drive-in-2n33q0e.jpg"
     }
 ]
+
+export default posts; 
