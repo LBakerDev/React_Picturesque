@@ -12,7 +12,7 @@ const Photo = React.createClass({
                                 <div className="card">
                                     {/*img at the top in order to make fluid*/}
                                     <img src={post.display_src} alt={post.caption} 
-                                    className="card-img-top img-fluid" src=""/>
+                                    className="card-img-top img-fluid"/>
                                     
                                     <div className="card-block">
                                         <h4>{post.caption}</h4>

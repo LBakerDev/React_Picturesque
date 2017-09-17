@@ -11,7 +11,8 @@ function posts(state = [], action) {
         const i = action.index;
 
         
-        // return the updated state
+        // return the updated state. Takes in state of likes on posts before and after
+        // the one we click. Returns the states of those and increments the one we select.
         return [
             ...state.slice(0,i), // before the like we are updating
             {...state[i], likes: state[i].likes + 1},
