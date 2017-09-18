@@ -16,7 +16,7 @@ const Home = React.createClass ({
                 </div>
             </div>
                 
-            )
+        )
     }
 });
 
