@@ -1,11 +1,31 @@
 import React, {Component} from 'react';
-
-import { render } from 'react-dom'
-
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import * as actionCreators from '../actions/actionCreators';
 import Photo from  './photo';
 
-const Home = React.createClass ({
+class Home extends Component {
+  constructor(props, context) {
+    super(props, context);
+    this.state = {
+      loading: false,
+    };
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.coords) {
+      this.setState({
+        loading: true,
+      });
+      this.props.actions.getRecentPosts()
+        .then(() => this.setState({loading: false}));
+    }
+  }
+
     render() {
+      if (this.state.loading) {
+        return <div>loading...</div>;
+      }
         return (
             <div> 
                 <div className="container">
@@ -18,6 +38,19 @@ const Home = React.createClass ({
                 
         )
     }
-});
+}
 
-export default Home;
+
+function mapStateToProps(state) {
+  return {
+    locations: state.posts
+  };
+}
+
+// Sets actions to this.props.action
+function mapDispatchToProps(dispatch) {
+  return {
+    actions: bindActionCreators(actionCreators, dispatch)
+  };
+}
+export default connect(mapStateToProps, mapDispatchToProps)(Home);
