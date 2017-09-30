@@ -18,8 +18,6 @@ class Show extends Component {
                 <Comments postComments={postComments} {...this.props} />
             </div>
         )
-
-        
     }
 }
 

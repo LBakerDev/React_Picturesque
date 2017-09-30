@@ -8,6 +8,10 @@ import comments from './comments';
 
 // Merge function takes three arguments. Router is also part of state
 // which needs to be updated
-const rootReducer = combineReducers({posts, comments, routing: routerReducer });
+const rootReducer = combineReducers({
+  posts,
+  comments,
+  routing: routerReducer
+});
 
 export default rootReducer;

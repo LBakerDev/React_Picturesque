@@ -40,6 +40,7 @@ POSTS actions:
  */
 
 export function getRecentPostsSuccess(posts) {
+  console.log(posts);
   return {
     type: GET_RECENT_POSTS_SUCCESS,
     posts
@@ -49,21 +50,13 @@ export function getRecentPostsSuccess(posts) {
 export function getRecentPosts() {
     //return a connect wrapped function:
     return function(dispatch) {
-        //temporarily use mock data:
-      return new Promise(resolve => {
-          setTimeout(() => {
-            dispatch(posts);
-            resolve();
-          }, 2000)
-      });
-
         //call into the api:
-        // return PostsApi.getLatestPosts().then(posts => {
-        //     //call connect's dispatcher to provide posts to reducer:
-        //     dispatch(getRecentPostsSuccess(posts));
-        // })
-        //   .catch(err => {
-        //       throw(err);
-        //   });
+        return PostsApi.getLatestPosts().then(posts => {
+            //call connect's dispatcher to provide posts to reducer:
+            dispatch(getRecentPostsSuccess(posts));
+        })
+          .catch(err => {
+              throw(err);
+          });
     }
 }
