@@ -7,6 +7,8 @@ import PhotoList from  './photoList';
 class Home extends Component {
   constructor(props, context) {
     super(props, context);
+    //this.createNew.bind(this);
+
     this.state = {
       loading: false,
       initialPull: false
@@ -27,6 +29,11 @@ class Home extends Component {
     }
   }
 
+  // createNew() {
+  //   this.props.actions.createNew(formData)
+  //     .then(() => browserHistory.push('/posts/{code}'))
+  // }
+
   render() {
     if (this.state.loading) {
       return <div>loading...</div>;
@@ -45,6 +52,9 @@ class Home extends Component {
                    role="button">
                   Add a new Photo
                 </a>
+                {/*<form onSubmit={this.createNew}>
+
+                </form>*/}
               </p>
             </div>
           </div>

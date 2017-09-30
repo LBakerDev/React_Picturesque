@@ -60,3 +60,16 @@ export function getRecentPosts() {
           });
     }
 }
+
+// export function createNewPost(newPost) {
+//   return function(dispatch) {
+//     //call into the api:
+//     return PostsApi.createPost(newPost).then(post => {
+//       //call connect's dispatcher to provide posts to reducer:
+//       dispatch(createNewPostSuccess(post));
+//     })
+//       .catch(err => {
+//         throw(err);
+//       });
+//   }
+// }

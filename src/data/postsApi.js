@@ -23,6 +23,22 @@ class PostsApi {
       })
       .catch(err => console.error);
   }
+
+  // createPost(post) {
+  //   let url = `${apiBase}/posts`;
+  //   return fetch(url, {
+  //     method: "POST",
+  //     body: post
+  //   }).then(response => {
+  //     return response.text();
+  //   })
+  //     .then(body => {
+  //       if (body) {
+  //         return JSON.parse(body);
+  //       }
+  //       return body;
+  //     })
+  // }
 }
 
 export default PostsApi;
